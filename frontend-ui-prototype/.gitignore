@@ -3,7 +3,6 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
 
 # testing
 /coverage
@@ -24,6 +23,6 @@ yarn-error.log*
 
 # Yarn
 .yarn/*
+!.yarn/cache
 !.yarn/releases
 !.yarn/plugins
-.pnp.*
