@@ -30,6 +30,9 @@ model_file = Path("./ui_prototype/data/model.vw")
 # Setting this to true re-shuffles the sets and resets all user input.
 reshuffle_data = False
 
+# Backend server port
+backend_port = 4000
+
 # Data management
 # ===============
 # FIXME: Pickling is hardly efficient, but is used as a stand-in for access to some
@@ -299,7 +302,7 @@ def CORS():
 
 if __name__ == "__main__":
     conf = {
-        "global": {"server.socket_port": 4000, "server.socket_host": "0.0.0.0"},
+        "global": {"server.socket_port": backend_port, "server.socket_host": "0.0.0.0"},
         "/": {
             "request.dispatch": cherrypy.dispatch.MethodDispatcher(),
             "request.show_tracebacks": False,
